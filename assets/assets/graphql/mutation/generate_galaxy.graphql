@@ -1,0 +1,21 @@
+mutation GenerateGalaxy(
+  $actionId: String!,
+  $x: Int!,
+  $y: Int!,
+  $xNegative: Boolean!,
+  $yNegative: Boolean!,
+  $size: GalaxySize!,
+  $jetIndex: Int!,
+  $galaxySize: GalaxySize!,
+  $maxIndex: Int!,
+  $startNew: Boolean!
+) {
+  generateGalaxy(
+    actionId: $actionId,
+    coordinate: { x: $x, y: $y, xNegative: $xNegative, yNegative: $yNegative, size: $size },
+    jetIndex: $jetIndex,
+    galaxySize: $galaxySize,
+    maxIndex: $maxIndex,
+    startNew: $startNew
+  )
+}

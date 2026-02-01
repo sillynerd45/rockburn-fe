@@ -1,0 +1,3 @@
+mutation Increment($value: Int!) {
+  increment(value: $value)
+}

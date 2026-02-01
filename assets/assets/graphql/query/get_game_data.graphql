@@ -1,0 +1,56 @@
+query GetGameData {
+  getGameData {
+    lastCoordinate {
+      x
+      y
+      xNegative
+      yNegative
+      size
+    }
+    galaxyData {
+      key
+      value {
+        name
+        items {
+          index
+          gameObjectType
+        }
+      }
+    }
+    gameStats {
+      score
+      fuel
+      remainingLife
+      spaceTravelled
+      rotate
+      refuelCount
+      galaxyCount
+      jetIndex
+      jetDirection
+    }
+    archimedesLeaderboard {
+      playerName
+      distance
+      rotate
+      refuel
+      galaxy
+      timestamp
+    }
+    babbageLeaderboard {
+      playerName
+      distance
+      rotate
+      refuel
+      galaxy
+      timestamp
+    }
+    conwayLeaderboard {
+      playerName
+      distance
+      rotate
+      refuel
+      galaxy
+      timestamp
+    }
+  }
+}

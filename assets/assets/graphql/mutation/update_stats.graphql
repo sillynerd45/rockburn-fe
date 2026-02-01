@@ -1,0 +1,33 @@
+mutation UpdateStats(
+  $actionId: String!,
+  $score: Int!,
+  $fuel: Int!,
+  $remainingLife: Int!,
+  $spaceTravelled: Int!,
+  $rotate: Int!,
+  $refuelCount: Int!,
+  $galaxyCount: Int!,
+  $jetIndex: Int!,
+  $jetDirection: FighterJetDirection!,
+  $x: Int!,
+  $y: Int!,
+  $xNegative: Boolean!,
+  $yNegative: Boolean!,
+  $size: GalaxySize!
+) {
+  updateStats(
+    actionId: $actionId,
+    stats: {
+      score: $score,
+      fuel: $fuel,
+      remainingLife: $remainingLife,
+      spaceTravelled: $spaceTravelled,
+      rotate: $rotate,
+      refuelCount: $refuelCount,
+      galaxyCount: $galaxyCount,
+      jetIndex: $jetIndex,
+      jetDirection: $jetDirection
+    },
+    coordinate: { x: $x, y: $y, xNegative: $xNegative, yNegative: $yNegative, size: $size }
+  )
+}

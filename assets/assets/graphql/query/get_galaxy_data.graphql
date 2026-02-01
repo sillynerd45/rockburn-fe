@@ -1,0 +1,9 @@
+query GetGalaxyData($x: Int!, $y: Int!, $xNegative: Boolean!, $yNegative: Boolean!, $size: GalaxySize!) {
+  getGalaxyData(coordinate: { x: $x, y: $y, xNegative: $xNegative, yNegative: $yNegative, size: $size }) {
+    name
+    items {
+      index
+      gameObjectType
+    }
+  }
+}

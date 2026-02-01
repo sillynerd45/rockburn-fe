@@ -1,0 +1,10 @@
+query GetLeaderboard($leaderboardId: String!) {
+  getLeaderboard(leaderboardId: $leaderboardId) {
+    playerName
+    distance
+    rotate
+    refuel
+    galaxy
+    timestamp
+  }
+}

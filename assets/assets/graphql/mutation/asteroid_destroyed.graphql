@@ -1,0 +1,15 @@
+mutation AsteroidDestroyed(
+  $actionId: String!,
+  $x: Int!,
+  $y: Int!,
+  $xNegative: Boolean!,
+  $yNegative: Boolean!,
+  $size: GalaxySize!,
+  $index: Int!
+) {
+  asteroidDestroyed(
+    actionId: $actionId,
+    coordinate: { x: $x, y: $y, xNegative: $xNegative, yNegative: $yNegative, size: $size },
+    index: $index
+  )
+}

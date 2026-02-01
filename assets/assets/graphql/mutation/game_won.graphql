@@ -1,0 +1,23 @@
+mutation GameWon(
+  $actionId: String!,
+  $galaxySize: GalaxySize!,
+  $playerName: String!,
+  $distance: Int!,
+  $rotate: Int!,
+  $refuel: Int!,
+  $galaxy: Int!,
+  $timestamp: Timestamp!
+) {
+  gameWon(
+    actionId: $actionId,
+    galaxySize: $galaxySize,
+    entry: {
+      playerName: $playerName,
+      distance: $distance,
+      rotate: $rotate,
+      refuel: $refuel,
+      galaxy: $galaxy,
+      timestamp: $timestamp
+    }
+  )
+}
